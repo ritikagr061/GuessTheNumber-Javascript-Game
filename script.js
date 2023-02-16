@@ -12,7 +12,7 @@ let score=20;
 let random = Math.floor(Math.random()*20+1);
 
 document.querySelector(".score").textContent=score;
-document.querySelector(".number").textContent=random;
+//document.querySelector(".number").textContent=random;
 document.querySelector(".highscore").textContent=highscore;
 
 
@@ -29,6 +29,7 @@ function(){
         
         //console.log(highscore);
         document.querySelector(".highscore").textContent=highscore;
+        document.querySelector(".number").textContent=random;
     }
     else if(value<random)
     {
@@ -43,5 +44,11 @@ function(){
 document.querySelector(".again").addEventListener('click',
 function(){
     score=20;
+    random = Math.floor(Math.random()*20+1);
 
+    document.querySelector(".score").textContent=score;
+    document.querySelector(".number").textContent='?';
+    document.querySelector("body").style.backgroundColor='#222';
+    
+    document.querySelector(".message").textContent="start guessing again...";
 })

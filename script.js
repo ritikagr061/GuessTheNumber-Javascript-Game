@@ -25,6 +25,10 @@ function(){
     if(value==random){
         document.querySelector(".message").textContent="🎊🎊 YaY! Correct Number!!";
         document.querySelector("body").style.backgroundColor='green';
+        highscore=Math.max(Number(highscore),Number(score));
+        
+        //console.log(highscore);
+        document.querySelector(".highscore").textContent=highscore;
     }
     else if(value<random)
     {
@@ -36,4 +40,8 @@ function(){
     }
 })
 
+document.querySelector(".again").addEventListener('click',
+function(){
+    score=20;
 
+})
